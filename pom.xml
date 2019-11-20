@@ -20,6 +20,15 @@
   <description>CALS Micro Service</description>
 
   <properties>
+    <!--
+      Make IntelliJ use preferred Code Style.
+      See https://kotlinlang.org/docs/reference/code-style-migration-guide.html
+    -->
+    <kotlin.code.style>official</kotlin.code.style>
+    <kotlin.version>1.3.41</kotlin.version>
+    <kotlin.compiler.incremental>true</kotlin.compiler.incremental>
+    <kotlin.compiler.jvmTarget>1.8</kotlin.compiler.jvmTarget>
+
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <jdk.version>1.8</jdk.version>
     <excluded.test.groups></excluded.test.groups>
@@ -57,6 +66,13 @@
   </distributionManagement>
 
   <dependencies>
+
+    <!-- Kotlin -->
+    <dependency>
+      <groupId>org.jetbrains.kotlin</groupId>
+      <artifactId>kotlin-stdlib-jdk8</artifactId>
+      <version>${kotlin.version}</version>
+    </dependency>
 
     <!-- Jetty -->
     <dependency>
@@ -138,7 +154,33 @@
   </dependencies>
 
   <build>
+    <sourceDirectory>${project.basedir}/src/main/kotlin</sourceDirectory>
+    <testSourceDirectory>${project.basedir}/src/test/kotlin</testSourceDirectory>
     <plugins>
+
+      <plugin>
+        <groupId>org.jetbrains.kotlin</groupId>
+        <artifactId>kotlin-maven-plugin</artifactId>
+        <version>${kotlin.version}</version>
+        <configuration>
+          <jvmTarget>${kotlin.compiler.jvmTarget}</jvmTarget>
+        </configuration>
+        <executions>
+          <execution>
+            <id>compile</id>
+            <goals>
+              <goal>compile</goal>
+            </goals>
+          </execution>
+          <execution>
+            <id>test-compile</id>
+            <goals>
+              <goal>test-compile</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-surefire-plugin</artifactId>
@@ -199,6 +241,21 @@
                 -->
               </transformers>
             </configuration>
+          </execution>
+        </executions>
+      </plugin>
+
+      <!-- ktlint for code style -->
+      <plugin>
+        <groupId>com.github.gantsign.maven</groupId>
+        <artifactId>ktlint-maven-plugin</artifactId>
+        <version>1.1.1</version>
+        <executions>
+          <execution>
+            <id>check</id>
+            <goals>
+              <goal>check</goal>
+            </goals>
           </execution>
         </executions>
       </plugin>
