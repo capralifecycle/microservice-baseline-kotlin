@@ -1,9 +1,9 @@
 package no.capraconsulting.config
 
-import org.slf4j.LoggerFactory
 import javax.ws.rs.container.ContainerRequestContext
 import javax.ws.rs.container.ContainerResponseContext
 import javax.ws.rs.container.ContainerResponseFilter
+import org.slf4j.LoggerFactory
 
 /**
  * This filter is optionally enabled and wired in [JerseyConfig]

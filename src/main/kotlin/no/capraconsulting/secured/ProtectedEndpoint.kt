@@ -1,11 +1,11 @@
 package no.capraconsulting.secured
 
-import no.capraconsulting.secured.ProtectedEndpoint.Companion.SECURED_PATH
 import javax.ws.rs.GET
 import javax.ws.rs.Path
 import javax.ws.rs.Produces
 import javax.ws.rs.core.MediaType
 import javax.ws.rs.core.Response
+import no.capraconsulting.secured.ProtectedEndpoint.Companion.SECURED_PATH
 
 @Path(SECURED_PATH)
 class ProtectedEndpoint(private val message: String) {

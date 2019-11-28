@@ -1,14 +1,14 @@
 package no.capraconsulting.config
 
+import java.io.Writer
+import java.nio.charset.StandardCharsets
+import javax.servlet.http.HttpServletRequest
+import javax.servlet.http.HttpServletResponse
 import org.eclipse.jetty.http.HttpStatus
 import org.eclipse.jetty.http.MimeTypes
 import org.eclipse.jetty.server.Request
 import org.eclipse.jetty.server.Response
 import org.eclipse.jetty.server.handler.ErrorHandler
-import java.io.Writer
-import java.nio.charset.StandardCharsets
-import javax.servlet.http.HttpServletRequest
-import javax.servlet.http.HttpServletResponse
 
 class JsonJettyErrorHandler : ErrorHandler() {
 

@@ -1,17 +1,17 @@
 package no.capraconsulting.health
 
-import no.capraconsulting.health.HealthEndpoint.Companion.HEALTH_PATH
-import org.slf4j.LoggerFactory
 import java.io.IOException
 import java.lang.management.ManagementFactory
 import java.time.Instant
 import java.time.temporal.ChronoUnit
-import java.util.*
+import java.util.Properties
 import javax.ws.rs.GET
 import javax.ws.rs.Path
 import javax.ws.rs.Produces
 import javax.ws.rs.core.MediaType
 import javax.ws.rs.core.Response
+import no.capraconsulting.health.HealthEndpoint.Companion.HEALTH_PATH
+import org.slf4j.LoggerFactory
 
 private val LOG = LoggerFactory.getLogger(HealthEndpoint::class.java)
 

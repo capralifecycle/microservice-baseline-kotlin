@@ -1,5 +1,7 @@
 package no.capraconsulting
 
+import java.util.Properties
+import kotlin.system.exitProcess
 import no.capraconsulting.config.BasicAuthSecurityHandler
 import no.capraconsulting.config.JerseyConfig
 import no.capraconsulting.config.JsonJettyErrorHandler
@@ -11,8 +13,6 @@ import org.eclipse.jetty.servlet.ServletContextHandler
 import org.eclipse.jetty.servlet.ServletHolder
 import org.glassfish.jersey.servlet.ServletContainer
 import org.slf4j.LoggerFactory
-import java.util.Properties
-import kotlin.system.exitProcess
 
 private val log = LoggerFactory.getLogger(AppMain::class.java)
 

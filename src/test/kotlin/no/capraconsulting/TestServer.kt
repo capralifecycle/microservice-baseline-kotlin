@@ -1,8 +1,8 @@
 package no.capraconsulting
 
 import com.jayway.restassured.RestAssured
-import org.slf4j.LoggerFactory
 import java.util.Properties
+import org.slf4j.LoggerFactory
 
 class TestServer(private val port: Int, private val properties: Properties) {
     private var main: AppMain? = null

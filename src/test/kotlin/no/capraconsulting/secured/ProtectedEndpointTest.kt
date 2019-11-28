@@ -2,10 +2,10 @@ package no.capraconsulting.secured
 
 import com.jayway.restassured.RestAssured.given
 import com.jayway.restassured.builder.ResponseSpecBuilder
-import no.capraconsulting.config.AbstractEndpointTest
-import org.testng.annotations.Test
 import javax.ws.rs.core.MediaType
 import javax.ws.rs.core.Response
+import no.capraconsulting.config.AbstractEndpointTest
+import org.testng.annotations.Test
 
 @Test
 class ProtectedEndpointTest : AbstractEndpointTest() {
