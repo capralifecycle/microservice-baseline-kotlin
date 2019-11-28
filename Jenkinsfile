@@ -34,7 +34,7 @@ buildConfig([
     insideSonarScanner {
       analyzeSonarCloudForMaven([
         'sonar.organization': 'capraconsulting',
-        'sonar.projectKey': 'capraconsulting_microservice-baseline',
+        'sonar.projectKey': 'capraconsulting_microservice-baseline-kotlin',
       ])
     }
   }
