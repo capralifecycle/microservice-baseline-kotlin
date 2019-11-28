@@ -1,9 +1,9 @@
-# microservice-baseline
+# microservice-baseline-kotlin
 
-[![Build Status](https://jenkins.capra.tv/buildStatus/icon?job=cals-baselines/microservice-baseline/master)](https://jenkins.capra.tv/job/cals-baselines/job/microservice-baseline/job/master/)
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=capraconsulting_microservice-baseline&metric=alert_status)](https://sonarcloud.io/dashboard?id=capraconsulting_microservice-baseline)
-[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=capraconsulting_microservice-baseline&metric=coverage)](https://sonarcloud.io/dashboard?id=capraconsulting_microservice-baseline)
-[![Technical Debt](https://sonarcloud.io/api/project_badges/measure?project=capraconsulting_microservice-baseline&metric=sqale_index)](https://sonarcloud.io/dashboard?id=capraconsulting_microservice-baseline)
+[![Build Status](https://jenkins.capra.tv/buildStatus/icon?job=cals-baselines/microservice-baseline-kotlin/master)](https://jenkins.capra.tv/job/cals-baselines/job/microservice-baseline-kotlin/job/master/)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=capraconsulting_microservice-baseline-kotlin&metric=alert_status)](https://sonarcloud.io/dashboard?id=capraconsulting_microservice-baseline-kotlin)
+[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=capraconsulting_microservice-baseline-kotlin&metric=coverage)](https://sonarcloud.io/dashboard?id=capraconsulting_microservice-baseline-kotlin)
+[![Technical Debt](https://sonarcloud.io/api/project_badges/measure?project=capraconsulting_microservice-baseline-kotlin&metric=sqale_index)](https://sonarcloud.io/dashboard?id=capraconsulting_microservice-baseline-kotlin)
 
 This project serves as a baseline when you wish to begin a
 new micro service exposing HTTP endpoints.
