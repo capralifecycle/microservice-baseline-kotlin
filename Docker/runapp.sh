@@ -2,7 +2,6 @@
 set -e
 
 APP=app.jar
-JAVA_PARAMS="-XX:+UnlockExperimentalVMOptions -XX:+UseCGroupMemoryLimitForHeap"
 
 echo " --- RUNNING $(basename "$0") $(date -u "+%Y-%m-%d %H:%M:%S Z") --- "
 set -x
@@ -20,4 +19,5 @@ if [ "$AWS_PARAMETER_STORE_ENABLED" = "true" ]; then
     fi
 fi
 
-/usr/bin/java $JAVA_PARAMS $JAVA_PARAMS_OVERRIDE -jar $APP
+java $JAVA_PARAMS_OVERRIDE -jar $APP
+

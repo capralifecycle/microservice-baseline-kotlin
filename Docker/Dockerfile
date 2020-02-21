@@ -1,21 +1,18 @@
-FROM openjdk:8-jre-alpine
-RUN apk --no-cache upgrade \
-  && apk --no-cache add \
-    groff \
-    python2 \
-    bash \
-  && apk --no-cache add --virtual build-dep \
-      python2-dev \
-      py2-pip \
+FROM openjdk:11-jre-slim
+
+RUN apt-get update && apt-get install -y --no-install-recommends \
+		python \
+		python-setuptools \
+		python-pip \
+	&& rm -rf /var/lib/apt/lists/* \
   && pip install awscli \
   && pip install boto3 \
-  && apk del build-dep \
   && rm -rf ~/.cache/pip
 
-ENV JAVA_HOME=/usr/lib/jvm/java-1.8-openjdk \
+ENV JAVA_HOME=/usr/lib/jvm/java-11-openjdk \
     USER=appuser
 ENV HOME=/home/$USER
-RUN adduser -S $USER
+RUN useradd $USER
 
 ## Copy configuration overrides and run script
 ## Copy application itself
