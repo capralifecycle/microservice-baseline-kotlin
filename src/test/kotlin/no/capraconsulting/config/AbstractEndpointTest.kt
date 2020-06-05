@@ -1,11 +1,11 @@
 package no.capraconsulting.config
 
-import java.net.InetAddress
-import java.util.Properties
-import javax.net.ServerSocketFactory
 import no.capraconsulting.TestServer
 import org.testng.annotations.AfterSuite
 import org.testng.annotations.BeforeSuite
+import java.net.InetAddress
+import java.util.Properties
+import javax.net.ServerSocketFactory
 
 abstract class AbstractEndpointTest {
 

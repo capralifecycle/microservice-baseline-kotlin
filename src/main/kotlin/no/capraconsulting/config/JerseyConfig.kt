@@ -1,11 +1,11 @@
 package no.capraconsulting.config
 
-import java.util.Properties
 import no.capraconsulting.config.PropertiesHelper.boolean
 import no.capraconsulting.config.PropertiesHelper.requireString
 import no.capraconsulting.config.PropertiesHelper.string
 import no.capraconsulting.secured.ProtectedEndpoint
 import org.glassfish.jersey.server.ResourceConfig
+import java.util.Properties
 
 class JerseyConfig(properties: Properties) : ResourceConfig() {
 

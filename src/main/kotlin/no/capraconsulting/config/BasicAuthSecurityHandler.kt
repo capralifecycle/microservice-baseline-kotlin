@@ -1,6 +1,5 @@
 package no.capraconsulting.config
 
-import javax.ws.rs.HttpMethod
 import org.eclipse.jetty.security.ConstraintMapping
 import org.eclipse.jetty.security.ConstraintSecurityHandler
 import org.eclipse.jetty.security.HashLoginService
@@ -9,6 +8,7 @@ import org.eclipse.jetty.security.UserStore
 import org.eclipse.jetty.security.authentication.BasicAuthenticator
 import org.eclipse.jetty.util.security.Constraint
 import org.eclipse.jetty.util.security.Credential
+import javax.ws.rs.HttpMethod
 
 object BasicAuthSecurityHandler {
 
